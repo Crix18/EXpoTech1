@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Informatica</title>
+    <style>
+        /*Estilos para el fondo*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("Copia\ de\ no.png");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+/*Estilos para las opcione */
+        .quiz-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+            align-items: center;
+        }
+        button {
+            background-color: #4caf50;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-bottom: 15px; 
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="question" id="question"></div>
+        <div class="options" id="options"></div>
+        <button onclick="checkAnswer()">Next question</button>
+    </div>
+    <script>
+        /*Preguntas */
+        const questions = [
+            {
+                question: "What is an algorithm in computer science?",
+        options: [
+            "A series of ordered instructions to perform a specific task.",
+             "A type of computer.",
+             "A programming language.",
+             "An input device."
+        ],
+        correctAnswer: 0 
+    },
+    {
+        question: "What function does a compiler have in programming?",
+        options: [
+            "Run the program.",
+             "Translate source code into machine code.",
+             "Create graphics and animations.",
+             "Detect hardware errors."
+        ],
+        correctAnswer: 1 
+    },
+            {
+                question: "Which of the following is an object-oriented programming language? ",
+                options: ["C", "Python", "Assembly", "SQL"],
+                correctAnswer: 1
+            },
+            {
+                question: "What acronyms represent the protocol used to transfer files on the web?",
+                options: ["FTP", "HTTP", "SMTP", "RTCP"],
+                correctAnswer: 0
+            },
+            {
+                question: "Which of the following is an open source operating system?",
+                options: ["Windows", "macOS", "Linux", "iOS"],
+                correctAnswer: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let canProceed = true; // Variable para controlar si puede pasar a la siguiente pregunta
+
+function loadQuestion() {
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
+    const currentQuizQuestion = questions[currentQuestion];
+
+    questionElement.textContent = currentQuizQuestion.question;
+    optionsElement.innerHTML = "";
+
+    currentQuizQuestion.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => selectAnswer(index);
+        optionsElement.appendChild(button);
+    });
+}
+
+function selectAnswer(index) {
+    const currentQuizQuestion = questions[currentQuestion];
+    if (index === currentQuizQuestion.correctAnswer) {
+        alert("¡Correct!");
+        canProceed = true; // Permite avanzar a la siguiente pregunta
+    } else {
+        alert("Wrong. Try again.");
+        canProceed = false; // No permite avanzar a la siguiente pregunta
+    }
+}
+
+function checkAnswer() {
+    if (canProceed) {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            alert("¡You've completed the quiz!");
+            currentQuestion = 0;
+            window.location.href = "index.html";
+        }
+    } else {
+        alert("Please answer correctly before answering the next question.");
+    }
+}
+
+loadQuestion();
+</script>
+</body>
+
+</html>

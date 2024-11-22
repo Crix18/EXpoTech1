@@ -1,0 +1,357 @@
+/*Nav-bar*/
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Young Serif', sans-serif;
+}
+
+body {
+    background-image: url("fondo1.png");
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #333;
+    background-size: cover;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #ffffff;
+}
+
+img {
+    width: 3.75rem; /* 60px / 16px = 3.75rem */
+    height: 3.75rem; /* 60px / 16px = 3.75rem */
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 1.25rem 0; /* 20px / 16px = 1.25rem */
+}
+
+h1 {
+    font-size: 1.875rem; /* 3rem / 1.6 = 1.875rem */
+}
+
+h2 {
+    font-size: 1.75rem; /* 2.8rem / 1.6 = 1.75rem */
+}
+
+h3 {
+    font-size: 1.125rem; /* 1.8rem / 1.6 = 1.125rem */
+}
+
+/* Estilos para los enlaces y botones de navegación */
+a:link, .nav a:link, .nav a:visited, .nav button, .theme-button, .login, .aboutus {
+    text-decoration: none;
+    color: rgba(234, 228, 255, 0.9);
+}
+
+
+
+.play-button-container {
+    position: absolute;
+    top: 31.25rem;
+    left: 39.0625rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border: 0.3125rem solid #00000000;
+    border-radius: 1.875rem;
+    z-index: 1;
+    transition: background-color 0.5s, color 0.5s;
+    box-shadow: 0 2.34375rem 2.65625rem rgba(0, 0, 0, 0.706);
+}
+
+.play-button-container a {
+    text-decoration: none;
+    color: #ffffff;
+    filter: brightness(125%);
+    transition: color 0.5s;
+}
+
+.play-button-container:hover {
+    filter: brightness(125%);
+    transition: color 0.5s;
+    background-color: rgba(0, 0, 0, 0.884);
+}
+
+.play-button-container:hover a {
+    text-decoration: none;
+    color: #85c51f;
+    filter: brightness(125%);
+    transition: color 0.5s;
+}
+
+.imagenesbuo {
+    margin-top: 1.5rem;
+    margin-right: 45rem;
+    margin-left: 0.625rem;
+    margin-bottom: 0.1rem;
+}
+
+/* Estilos para la navbar */
+.nav {
+    border-radius: 1.7rem;
+    margin-left: 2.5%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 0.3125rem 0 ;
+    box-shadow: 0 1.40625rem 1.640625rem rgba(0, 0, 0, 0.3);
+    border-bottom: 0.78125rem solid transparent;
+    transition: all 2.2s ease;
+}
+
+.nav a {
+    display: inline;
+    margin: 0.7rem;
+    font-size: 1.6rem;
+    color: rgba(234, 228, 255, 0.9); 
+}
+
+.login-button, .jugar-button, .signin-button {
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 0.625rem solid rgba(0, 0, 0, 0);
+    border-radius: 0.9375rem;
+    position: relative;
+}
+
+.nav a:hover {
+    color: #85c51f;
+    transition: color 0.5s;
+    filter: brightness(125%);
+} 
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    padding: 1.25rem;
+    border: 0.625rem solid transparent;
+    border-radius: 0.9375rem;
+}
+
+.nav-button:hover {
+    color: #85c51f;
+    filter: brightness(125%);
+}
+
+.nav.small {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0.78125rem 1.5625rem rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+
+.nav.small:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/*Nav-bar*/
+
+/*body*/
+.cuadro {
+    border-radius: 30px;
+    border: 0px solid #000; /* Establece un borde al cuadro */
+    padding: 20px; /* Añade relleno para separar el contenido del borde */
+    width: 80%; /* Establece el ancho del cuadro, puedes ajustarlo según tus necesidades */
+    margin:10%;
+    margin-block-end: 0%;
+    margin-top: 15%;
+    background-color: rgba(255, 255, 255, 0.549)
+}
+
+.cuadro.dark-theme {
+    background-color: #333;
+    color: #ffffff;}
+
+    .cuadro.dark-theme .p1 {
+        color: #fff; 
+    }
+
+    .text-container {
+        text-align: justify;
+    }
+    
+   .large-box {
+        background-color: #d3d3d3;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .large-box-t{
+        background-color:  #d3d3d3;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .text-image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .text-image-container p {
+        margin: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333;
+        flex-basis: 48%;
+    }
+    
+    .text-image-container img {
+        border: 2px solid transparent;
+        border-radius: 20px;
+        max-width: 45%;
+        height: auto;
+        flex-basis: 48%;
+    }
+    
+
+.p1{
+     margin: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333;
+        flex-basis: 48%;
+}
+h2{
+    text-align: center;
+}
+.x{
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    flex-basis: 48%;
+}
+.mapa4{
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    flex-basis: 48%;
+    margin-left: 10%;
+}
+
+.video{
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    flex-basis: 48%;
+    margin-left: 10%;
+
+}
+table {
+    width: 100%; /* Puedes ajustar el ancho según tus necesidades */
+  }
+  td {
+    padding: 8px;
+    width:50%;
+  }
+/*body*/
+    /*carrusel*/
+    .carousel-container {
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        z-index: 200;
+        width: 500px;
+        height: auto;
+        overflow: hidden;
+        align-content: center;
+    }
+      
+      .carousel {
+        transition: transform 0.5s;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .carousel img {
+        width: 500px;;
+        height: auto;
+        object-fit:cover;
+      }
+      /*carrusel*/
+
+/*footer*/
+/* Estilos para el footer xd */
+.footer {
+    transition: color 0.5s;
+    background-color: #333;
+    color: #ffffff;
+    padding: 1.25rem 16.5rem;
+    text-align: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 18.75rem;
+    height: max-content;
+    margin: 1.25rem 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0rem 1.25rem 0.625rem 1.25rem;
+}
+
+.footer-social {
+    margin-top: 1.25rem;
+}
+
+.footer-social a {
+    margin-right: 1.25rem;
+}
+
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.footer-container a:hover {
+    color: #85c51f;
+    transition: color 0.5s;
+    padding: 0.625rem 0;
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 0.625rem solid transparent;
+    border-radius: 0.9375rem;
+}

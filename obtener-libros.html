@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Obtener Libros</title>
+  <link rel="icon" type="image/x-icon" href="buo.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+    /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Young Serif', sans-serif;
+    }
+
+    /* Estilos para el body */
+    body {
+      background-color: #ffffff; /* Fondo blanco */
+      color: #004d5d; /* Texto principal */
+      font-size: 1.6rem;
+      line-height: 1.8;
+    }
+
+    /* Navbar */
+    .nav {
+      position: fixed; /* Mantiene el navbar en la parte superior */
+      top: 0;
+      left: 0;
+      width: 100%; /* Ancho completo */
+      background-color: #ffffff; /* Fondo blanco para el navbar */
+      z-index: 100; /* Siempre por encima del contenido */
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Espacio entre elementos */
+      padding: 1rem 2rem; /* Espaciado interno */
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+
+    /* Estilos para los enlaces dentro de la navbar */
+    .nav a {
+      padding: 0.5rem 1rem; /* Espaciado interno */
+      background-color: #ffffff; /* Fondo blanco */
+      color: #68053d; /* Color de texto */
+      border-radius: 0.5rem; /* Bordes redondeados */
+      text-decoration: none; /* Sin subrayado */
+      font-size: 1.6rem;
+      transition: all 0.3s ease; /* Transición suave */
+    }
+
+    /* Cambios al pasar el cursor sobre los enlaces */
+    .nav a:hover {
+      background-color: #68053d; /* Fondo al pasar el cursor */
+      color: #ffffff; /* Texto blanco */
+      box-shadow: 0 0 0.5rem rgba(104, 5, 61, 0.5); /* Sombra adicional */
+    }
+
+    /* Contenedor de la imagen a la izquierda */
+    .logo-container {
+      display: flex;
+      align-items: center; /* Centra verticalmente */
+    }
+
+    .logo {
+      height: 3rem; /* Tamaño del logo */
+      width: auto; /* Mantiene la relación de aspecto */
+      margin-right: 1rem; /* Espacio entre el logo y el resto */
+    }
+
+    /* Estilo para la barra de búsqueda */
+    .search-bar-container {
+        margin-right: 3rem;
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar {
+      width: 20rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #68053d; /* Color del borde */
+      border-radius: 0.5rem; /* Bordes redondeados */
+      font-size: 1rem;
+      color: #ffffff; /* Texto blanco */
+      background-color: #68053d; /* Fondo morado */
+    }
+
+    #search-bar:focus {
+      outline: none; /* Sin contorno */
+      border-color: #004d5d; /* Color del borde al enfocar */
+      box-shadow: 0 0 0.5rem rgba(0, 77, 93, 0.5);
+    }
+
+    /* Estilos para las imágenes */
+    .image-container {
+      display: flex; /* Usar flexbox para las imágenes */
+      justify-content: center; /* Centra las imágenes */
+      margin: -1rem; /* Margen alrededor del contenedor */
+      flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    }
+
+    .image-container img {
+      max-width: 100%; /* Cada imagen ocupará hasta el 20% del ancho */
+      height: auto; /* Mantiene la relación de aspecto */
+      margin: 0.5rem; /* Espaciado entre las imágenes */
+    }
+
+    /* Estilos para los encabezados */
+    h1, h2, h3 {
+      font-weight: 900;
+      margin: 2rem 0;
+      text-align: center; /* Centra los encabezados */
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004d5d; /* Fondo del footer */
+      color: #ffffff; /* Texto blanco */
+      padding: 1.25rem; /* Espaciado interno */
+      text-align: center; /* Centrar texto */
+    }
+
+    .texto1 {
+      color: #68053d; /* Texto destacado */
+      margin-top: 10rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo-container">
+        <img src="owlandimg.png" alt="Logo OWLAND" class="logo">
+      </div>
+      <a href="servicios.html" class="aprende-ya">Aprende Ya</a>
+      <div class="search-bar-container">
+        <input type="text" id="search-bar" placeholder="Buscar en la página..." />
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="image-container">
+      <img src="sc1.png" alt="Imagen 1">
+      <img src="sc2.png" alt="Imagen 2">
+      <img src="sc3.png" alt="Imagen 3">
+      <img src="sc4.png" alt="Imagen 4">
+      <img src="sc5.png" alt="Imagen 5">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68600.16184166382!2d-79.98481425834942!3d8.847327348444193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fac8fb7216a292f%3A0x1acb7857a669633a!2sCentro%20Recreativo%20El%20Mirador!5e0!3m2!1ses-419!2spa!4v1732216870959!5m2!1ses-419!2spa" width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </footer>
+</body>
+</html>

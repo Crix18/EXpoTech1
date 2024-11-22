@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Young Serif', sans-serif;
+}
+
+/* Estilos para el body */
+body {
+    margin: 0; /* Elimina márgenes para un diseño sin bordes */
+    background-color: white; /* Fondo blanco para el resto de la página */
+    position:relative;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: #ffffff; /* Blanco como color principal */
+    color: #004d5d; /* Texto principal */
+}
+
+body.dark-theme {
+    background-color: #004d5d;
+    color: #ffffff;
+}
+
+img {
+    width: 3em;
+    height: 3em;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* Estilos para los enlaces y botones de navegación */
+a:link, .nav a:link, .nav a:visited, .nav button, .theme-button, .login, .aboutus {
+    text-decoration: none;
+    color: #68053d; /* Color para enlaces */
+}
+
+.fondopn {
+    width: 100%;
+    height: auto;
+}
+
+.play-button-container {
+    position: absolute;
+    top: 13rem;
+    left: 42rem;
+    background-color: rgba(104, 5, 61, 0.8); /* Fondo semitransparente en #68053d */
+    padding: 10px 20px;
+    border: 0.3125rem solid transparent;
+    border-radius: 1.875rem;
+    z-index: 1;
+    transition: background-color 0.5s, color 0.5s;
+    box-shadow: 0 2.34375rem 2.65625rem rgba(0, 0, 0, 0.706);
+}
+
+.play-button-container a {
+    text-decoration: none;
+    color: #ffffff; /* Blanco para enlaces del botón */
+    filter: brightness(125%);
+    transition: color 0.5s;
+}
+
+.play-button-container:hover {
+    filter: brightness(125%);
+    background-color: rgba(104, 5, 61, 0.9);
+}
+
+.imagenesbuo {
+    margin-top: 1.5rem;
+    margin-right: 45rem;
+    margin-left: 0.625rem;
+    margin-bottom: 0.1rem;
+}
+
+/* Contenedor de la imagen a la izquierda */
+.logo-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: flex-start; /* Alinea a la izquierda */
+    margin-left: 1rem; /* Añade algo de espacio desde el borde izquierdo */
+}
+
+.logo {
+    height: 3rem; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: auto; /* Mantiene la relación de aspecto */
+    margin-right: 1rem; /* Espacio entre la imagen y el resto de los elementos */
+}
+
+
+/* Estilos para la navbar */
+.nav {
+    position: fixed; /* Hace que se mantenga en el tope de la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Abarca todo el ancho */
+    background-color: #ffffff; /* Fondo blanco para el navbar */
+    z-index: 100; /* Para que siempre esté por encima del resto del contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Centra los elementos en el espacio */
+    padding: 1rem 0; /* Espaciado interno */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+/* Estilos para los enlaces dentro de la navbar */
+.nav a {
+    display: inline-block; /* Asegura que los elementos ocupen espacio uniforme */
+    margin: 0 1rem;
+    padding: 0.5rem 1rem; /* Espaciado interno para crear la "cajita" */
+    background-color: #ffffff; /* Fondo del color actual de las letras */
+    color: #68053d; /* Letras blancas por defecto */
+    border-radius: 0.5rem; /* Bordes redondeados para las cajitas */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 1.6rem;
+    transition: all 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+/* Cambios al pasar el cursor sobre los enlaces */
+.nav a:hover {
+    background-color: #68053d; /* Fondo blanco al pasar el cursor */
+    color: #ffffff; /* Letras cambian al color del fondo original */
+    box-shadow: 0 0 0.5rem rgba(104, 5, 61, 0.5); /* Sombra adicional para destacar */
+}
+
+/* Ajuste adicional para imágenes dentro de la navbar */
+.nav img {
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    padding: 1.25rem;
+    border: 0.625rem solid transparent;
+    border-radius: 0.9375rem;
+}
+
+.nav.small {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0.78125rem 1.5625rem rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+
+.nav.small:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav .aprende-ya {
+    padding: 0.5rem 1.5rem; /* Tamaño del botón */
+    background-color: #ffffff; /* Fondo igual al color base */
+    color: #68053d; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    font-size: 1.6rem; /* Tamaño de letra */
+    cursor: pointer; /* Apunta como botón */
+    transition: all 0.3s ease; /* Transición para hover */
+    position: absolute; /* Posiciona el botón fuera del flujo normal */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro exacto */
+}
+
+/* Hover del botón */
+.nav .aprende-ya:hover {
+    background-color: #68053d; /* Fondo blanco al pasar el cursor */
+    color: #ffffff; /* Texto del color base */
+    box-shadow: 0 0 0.5rem rgba(104, 5, 61, 0.5); /* Sombra destacada */
+}
+
+
+/* Estilo para la barra de búsqueda */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Coloca la barra de búsqueda a la derecha */
+    width: 100%;
+    padding-right: 2rem; /* Añade algo de espacio a la derecha */
+}
+
+#search-bar {
+    width: 20rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #68053d; /* Color morado */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff; /* Texto blanco */
+    background-color: #68053d; /* Fondo morado */
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #004d5d;
+    box-shadow: 0 0 0.5rem rgba(0, 77, 93, 0.5);
+}
+/* texto xd */
+.texto1 {
+    color: #68053d; /* Texto blanco */
+    margin-top: 10rem;
+    text-align:center;
+}
+
+/* Estilos para las cajas grandes */
+.large-box-container {
+    display: flex;
+}
+
+
+.large-box {
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    height: 40vw; /* Ajusta la altura automáticamente según el ancho */
+    background-image: url('img1.jpeg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+}
+
+.text-image-container {
+    width: 100%; /* Asegura que el contenedor ocupe el ancho disponible */
+    height: auto; /* Ajusta la altura automáticamente */
+    position: relative;
+    padding: 1.875rem;
+    display: flex;
+    align-items: center; /* Centra contenido verticalmente si lo hay */
+    justify-content: center; /* Centra contenido horizontalmente si lo hay */
+}
+
+
+
+.image-buttons {
+    text-align: right;
+    padding-left: 25rem;
+    margin-top: 1.875rem;
+    margin-right: 12.5rem;
+}
+
+.image-buttons button {
+    width: 7rem;
+    height: 4rem;
+    margin: 0.625rem;
+    padding: 0.625rem 1.5rem;
+    background-color: #68053d;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.9375rem;
+}
+
+/* Estilo para la sección */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+  
+  /* Estilo para las filas */
+  .row {
+    font-size: calc(10px + 1vw); /* Ajusta el texto proporcionalmente al tamaño del cuadro */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Estilo para los cuadrados */
+  .square {
+    width: 21rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+  }
+  
+  /* Cuadros de texto */
+  .square.text {
+    font-size: calc(14px ); /* Ajusta el texto proporcionalmente al tamaño del cuadro */
+    background-color: #ffffff;
+    color: #68053d;
+    padding: 1rem;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+  /* Estilos generales */
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Young Serif', sans-serif;
+  }
+  
+  /* Estilos para el body */
+  body {
+      margin: 0; /* Elimina márgenes para un diseño sin bordes */
+      background-color: white; /* Fondo blanco para el resto de la página */
+      position:relative;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      background-color: #ffffff; /* Blanco como color principal */
+      color: #004d5d; /* Texto principal */
+  }
+  
+  body.dark-theme {
+      background-color: #004d5d;
+      color: #ffffff;
+  }
+  
+  img {
+      width: 3em;
+      height: 3em;
+  }
+  
+  h1, h2, h3 {
+      font-weight: 900;
+      margin-left: 41rem;
+      margin-top: 6rem;
+    }
+  
+  
+  h1 {
+      font-size: 3rem;
+  }
+  
+  h2 {
+      font-size: 2.8rem;
+  }
+  
+  h3 {
+      font-size: 1.8rem;
+  }
+  
+  /* Estilos para los enlaces y botones de navegación */
+  a:link, .nav a:link, .nav a:visited, .nav button, .theme-button, .login, .aboutus {
+      text-decoration: none;
+      color: #68053d; /* Color para enlaces */
+  }
+  
+
+  /* Contenedor de la imagen a la izquierda */
+  .logo-container {
+      display: flex;
+      align-items: center; /* Centra verticalmente */
+      justify-content: flex-start; /* Alinea a la izquierda */
+      margin-left: 1rem; /* Añade algo de espacio desde el borde izquierdo */
+  }
+  
+  .logo {
+      height: 3rem; /* Ajusta el tamaño de la imagen según sea necesario */
+      width: auto; /* Mantiene la relación de aspecto */
+      margin-right: 1rem; /* Espacio entre la imagen y el resto de los elementos */
+  }
+  
+  
+  /* Estilos para la navbar */
+  .nav {
+      position: fixed; /* Hace que se mantenga en el tope de la pantalla */
+      top: 0;
+      left: 0;
+      width: 100%; /* Abarca todo el ancho */
+      background-color: #ffffff; /* Fondo blanco para el navbar */
+      z-index: 100; /* Para que siempre esté por encima del resto del contenido */
+      display: flex;
+      align-items: center;
+      justify-content: space-around; /* Centra los elementos en el espacio */
+      padding: 1rem 0; /* Espaciado interno */
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  }
+  
+  /* Estilos para los enlaces dentro de la navbar */
+  .nav a {
+      display: inline-block; /* Asegura que los elementos ocupen espacio uniforme */
+      margin: 0 1rem;
+      padding: 0.5rem 1rem; /* Espaciado interno para crear la "cajita" */
+      background-color: #ffffff; /* Fondo del color actual de las letras */
+      color: #68053d; /* Letras blancas por defecto */
+      border-radius: 0.5rem; /* Bordes redondeados para las cajitas */
+      text-decoration: none; /* Elimina el subrayado de los enlaces */
+      font-size: 1.6rem;
+      transition: all 0.3s ease; /* Transición suave al cambiar de color */
+  }
+  
+  /* Cambios al pasar el cursor sobre los enlaces */
+  .nav a:hover {
+      background-color: #68053d; /* Fondo blanco al pasar el cursor */
+      color: #ffffff; /* Letras cambian al color del fondo original */
+      box-shadow: 0 0 0.5rem rgba(104, 5, 61, 0.5); /* Sombra adicional para destacar */
+  }
+  
+  /* Ajuste adicional para imágenes dentro de la navbar */
+  .nav img {
+      height: 3rem;
+      margin-right: 1rem;
+  }
+  
+  .nav-button {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem;
+      padding: 1.25rem;
+      border: 0.625rem solid transparent;
+      border-radius: 0.9375rem;
+  }
+  
+  .nav.small {
+      padding: 1.25rem;
+      background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0.78125rem 1.5625rem rgba(0, 0, 0, 0.3);
+      width: 100%;
+      border-radius: 0;
+      margin: 0;
+  }
+  
+  .nav.small:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .nav .aprende-ya {
+      padding: 0.5rem 1.5rem; /* Tamaño del botón */
+      background-color: #ffffff; /* Fondo igual al color base */
+      color: #68053d; /* Texto blanco */
+      border: none; /* Sin borde */
+      border-radius: 0.5rem; /* Bordes redondeados */
+      font-size: 1.6rem; /* Tamaño de letra */
+      cursor: pointer; /* Apunta como botón */
+      transition: all 0.3s ease; /* Transición para hover */
+      position: absolute; /* Posiciona el botón fuera del flujo normal */
+      top: 50%; /* Centrado verticalmente */
+      left: 50%; /* Centrado horizontalmente */
+      transform: translate(-50%, -50%); /* Ajusta el centro exacto */
+  }
+  
+  /* Hover del botón */
+  .nav .aprende-ya:hover {
+      background-color: #68053d; /* Fondo blanco al pasar el cursor */
+      color: #ffffff; /* Texto del color base */
+      box-shadow: 0 0 0.5rem rgba(104, 5, 61, 0.5); /* Sombra destacada */
+  }
+  
+  
+  /* Estilo para la barra de búsqueda */
+  .search-bar-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Coloca la barra de búsqueda a la derecha */
+      width: 100%;
+      padding-right: 2rem; /* Añade algo de espacio a la derecha */
+  }
+  
+  #search-bar {
+      width: 20rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #68053d; /* Color morado */
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      color: #ffffff; /* Texto blanco */
+      background-color: #68053d; /* Fondo morado */
+  }
+  
+  #search-bar:focus {
+      outline: none;
+      border-color: #004d5d;
+      box-shadow: 0 0 0.5rem rgba(0, 77, 93, 0.5);
+  }
+
+  .texto1 {
+    color: #68053d; /* Texto blanco */
+    margin-top: 10rem;
+    text-align:center;
+}
+
+  /* Estilo para la sección */
+  .content-section {
+      display: flex;
+      flex-direction:column;
+      align-items:initial;
+      padding: 2rem 0;
+      gap: 2rem;
+    }
+    
+    /* Estilo para las filas */
+    .row {
+      font-size: calc(10px + 1vw); /* Ajusta el texto proporcionalmente al tamaño del cuadro */
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .large-box-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los cuadros se ajusten */
+        justify-content: center; /* Centra los cuadros */
+        gap: 2rem; /* Espacio horizontal entre los cuadros */
+        margin-left: 14rem ;
+        margin-right: 14rem ;
+
+    }
+    
+    
+    .square {
+        width: 21rem; /* Ancho de los cuadros */
+        height: 23rem; /* Altura de los cuadros */
+        position: relative; /* Para posicionar el texto */
+        background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita repeticiones */
+    }
+    
+    /* Imágenes de fondo para cada cuadrado */
+    .square.image1 {
+        background-image: url('BCIENCIAS.png'); /* Cambia por la ruta de tu imagen */
+    }
+    
+    .square.image2 {
+        background-image: url('BTECNOLOGIA.png'); /* Cambia por la ruta de tu imagen */
+    }
+    
+    .square.image3 {
+        background-image: url('BAGRONOMIA.png'); /* Cambia por la ruta de tu imagen */
+    }
+    
+    .square.image4 {
+        background-image: url('BELECTRICIDAD.png'); /* Cambia por la ruta de tu imagen */
+    }
+    
+    /* Estilo para el texto sobre los cuadros */
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(209, 209, 209); /* Fondo semi-transparente */
+        color: #ffffff; /* Texto blanco */
+        text-align: center;
+        padding: 1rem; /* Espacio interno */
+        font-weight: bold; /* Negrita */
+    }
+    
+    .text-overlay a {
+        color: #68053d; /* Enlace blanco */
+        text-decoration: none; /* Sin subrayado */
+    }
+
+
+
+
+/* Estilos para el footer */
+.footer {
+    transition: color 0.5s;
+    background-color: #004d5d; /* Fondo del footer */
+    color: #ffffff; /* Texto blanco */
+    padding: 1.25rem 16.5rem;
+    text-align: center;
+}
+
+.footer-container a:hover {
+    color: #68053d; /* Cambia a #68053d en hover */
+    transition: color 0.5s;
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 0.625rem solid transparent;
+    border-radius: 0.9375rem;
+}
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" href = "help.css" >
+  <title>OWLAND</title>
+</head>
+  <body >
+    <header>
+      <!-- navbar -->
+      <nav class="nav">
+        <div class="imagenesbuo">
+          <a href="ABOUT US.html">
+            <img class="img-2" src="buo2.png" alt="Imagen 2">
+          </a>
+          <a href="index.html">
+            <img class="img-1" src="buo.png" alt="Imagen 1">
+          </a>
+        </div>
+        <!-- Enlace para jugar -->
+        <div class="Jugar">
+          <a class="jugar-button" href="play.html">Play Free</a>
+        </div>
+        <!-- iniciar sesión -->
+        <div class="login">
+          <a class="login-button" href="loginPQ.html">Login</a>
+        </div>
+        <!-- registrarse -->
+        <div class="signin">
+          <a class="signin-button" href="signin.html">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+    <div class="cuadro">
+      <div class="container-info">
+        <div class="texto1">
+          <h2>¡Your opinion is imporatnt for us!</h2>
+        </div>
+            <p class="p1">
+              In Owland, we believe in continuous improvement, 
+              and your feedback is essential.<br>
+              We want to hear about your experience and 
+              any suggestions you may have.<br> 
+              Please use the form below 
+              to share your feedback:
+            </p>
+      
+            <div class="login-box">
+                <form id="retroalimentación">
+                    <label for="correo">E-Mail:</label>
+                    <input type="text" id="correo" name="correo" required>
+                    <br>
+                    <label for=" Calificación de la Experiencia: ">Experience qualification:</label>
+                    <input type="text" id="experiencia" name="experiencia" required>
+                    <br>
+                    <input type="submit" value="Submit" onclick="enviar()">
+                </form>
+            </div>
+                <script>
+                    function enviar(){
+                        window.location.href = "prvowland.html";
+                    }
+                </script>
+                <div class= "ut">
+                  <p>We appreciate your time and collaboration!<br>
+                    Together, we can make your experience even better.</p>
+                  
+                </div>
+      </div>
+    </div>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="owlandimg3.png" alt="Logo OWLAND">
+      </div>
+      <!-- Enlaces del footer -->
+      <div class="footer-links">
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="help.html">Help Us Improve</a></li>
+        </ul>
+      </div>
+      <!-- Iconos de redes sociales en el footer -->
+      <div class="footer-social">
+        <a href="https://github.com/Crix18/OwlandOF.git"><img src="github.png" alt="Github"></a>
+        <a href="https://instagram.com/owland.co?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <!-- Copyright del footer -->
+    <div class="footer-copyright">
+      <p>&copy; 2023 OWLAND - All rights reserved</p>
+    </div>
+  </footer>
+    <!-- Script externo -->
+    <script src="owlscript.js"></script>
+</body>            
+</html>

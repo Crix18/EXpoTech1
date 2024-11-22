@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <script src = "pilar.js"></script>
+</head>
+    <body>
+
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Young Serif', sans-serif;
+}
+
+/* Estilos para el body */
+body {
+    background-image: url("fondo1.png");
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #ffffff;
+}
+
+img {
+    width: 3em;
+    height: 3em;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* Estilos para los enlaces y botones de navegación */
+a:link, .nav a:link, .nav a:visited, .nav button, .theme-button, .login, .aboutus {
+    text-decoration: none;
+    color: rgba(234, 228, 255, 0.9);
+}
+
+
+
+.play-button-container {
+    position: absolute;
+    top: 31.25rem;
+    left: 39.0625rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border: 0.3125rem solid #00000000;
+    border-radius: 1.875rem;
+    z-index: 1;
+    transition: background-color 0.5s, color 0.5s;
+    box-shadow: 0 2.34375rem 2.65625rem rgba(0, 0, 0, 0.706);
+}
+
+.play-button-container a {
+    text-decoration: none;
+    color: #ffffff;
+    filter: brightness(125%);
+    transition: color 0.5s;
+}
+
+.play-button-container:hover {
+    filter: brightness(125%);
+    transition: color 0.5s;
+    background-color: rgba(0, 0, 0, 0.884);
+}
+
+.play-button-container:hover a {
+    text-decoration: none;
+    color: #85c51f;
+    filter: brightness(125%);
+    transition: color 0.5s;
+}
+
+.imagenesbuo {
+    margin-top: 1.5rem;
+    margin-right: 45rem;
+    margin-left: 0.625rem;
+    margin-bottom: 0.1rem;
+}
+
+/* Estilos para la navbar */
+.nav {
+    border-radius: 1.7rem;
+    margin-left: 2.5%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 0.3125rem 0 ;
+    box-shadow: 0 1.40625rem 1.640625rem rgba(0, 0, 0, 0.3);
+    border-bottom: 0.78125rem solid transparent;
+    transition: all 2.2s ease;
+}
+
+.nav a {
+    display: inline;
+    margin: 0.7rem;
+    font-size: 1.6rem;
+    color: rgba(234, 228, 255, 0.9); 
+}
+
+.login-button, .jugar-button, .signin-button {
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 0.625rem solid rgba(0, 0, 0, 0);
+    border-radius: 0.9375rem;
+    position: relative;
+}
+
+.nav a:hover {
+    color: #85c51f;
+    transition: color 0.5s;
+    filter: brightness(125%);
+} 
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    padding: 1.25rem;
+    border: 0.625rem solid transparent;
+    border-radius: 0.9375rem;
+}
+
+.nav-button:hover {
+    color: #85c51f;
+    filter: brightness(125%);
+}
+
+.nav.small {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0.78125rem 1.5625rem rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+
+.nav.small:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.img1 {
+    border: none;
+    filter: brightness(100%);
+    width: 60px;
+}
+
+.aboutus {
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 2px solid #000;
+    margin: 0 1rem;
+}
+
+.img1 {
+    text-decoration: none;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 300;
+}
+
+.login-box {
+    margin: 200px auto;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(146, 196, 150);
+    z-index: 200;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: rgb(101, 107, 12);
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.background-general {
+    background-color: rgba(62, 196, 91, 0.705);
+}
+
+.footer {
+    transition: color 0.5s;
+    background-color: #333;
+    color: #ffffff;
+    padding: 1.25rem 16.5rem;
+    text-align: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 18.75rem;
+    height: max-content;
+    margin: 1.25rem 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0rem 1.25rem 0.625rem 1.25rem;
+}
+
+.footer-social {
+    margin-top: 1.25rem;
+}
+
+.footer-social a {
+    margin-right: 1.25rem;
+}
+
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.footer-container a:hover {
+    color: #85c51f;
+    transition: color 0.5s;
+    padding: 0.625rem 0;
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 0.625rem solid transparent;
+    border-radius: 0.9375rem;
+}
+
+    </style>
+
+<header>
+    <!-- navbar -->
+    <nav class="nav">
+      <div class="imagenesbuo">
+        <a href="ABOUT US.html">
+          <img class="img-2" src="buo2.png" alt="Imagen 2">
+        </a>
+        <a href="index.html">
+          <img class="img-1" src="buo.png" alt="Imagen 1">
+        </a>
+      </div>
+      <!-- Enlace para jugar -->
+      <div class="Jugar">
+        <a class="jugar-button" href="play.html">Play Free</a>
+      </div>
+      <!-- iniciar sesión -->
+      <div class="login">
+        <a class="login-button" href="loginPQ.html">Login</a>
+      </div>
+      <!-- registrarse -->
+      <div class="signin">
+        <a class="signin-button" href="signin.html">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+    <div class="login-box">
+        <h2>Log in</h2>
+
+        <form action="pilar.js" method="post">
+            <input type="text" name="usuario" placeholder="User" required><br>
+            <input type="password" name="contrasena" placeholder="password" required><br> 
+        </form> 
+    <button type="submit" onclick="iniciarSesion()">Log in</button>
+    </div>
+    <!-- Contenido de la sección -->
+ 
+ <!-- Pie de página -->
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="owlandimg3.png" alt="Logo OWLAND">
+      </div>
+      <!-- Enlaces del footer -->
+      <div class="footer-links">
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="help.html">Help Us Improve</a></li>
+        </ul>
+      </div>
+ 
+      <!-- Iconos de redes sociales en el footer -->
+      <div class="footer-social">
+        <a href="https://github.com/Crix18/OwlandOF.git"><img src="github.png" alt="Github"></a>
+        <a href="https://instagram.com/owland.co?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <!-- Copyright del footer -->
+    <div class="footer-copyright">
+      <p>&copy; 2023 OWLAND - All rights reserved</p>
+    </div>
+  </footer>
+      <script src="owlscript.js"></script>

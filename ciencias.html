@@ -1,0 +1,82 @@
+Código HTML Actualizado
+Copiar
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>B. Ciencias - OWLAND</title>
+  <link rel="stylesheet" href="styleservicios.css">
+  <link rel="icon" type="image/x-icon" href="buo.png">
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%; /* Ocupa todo el ancho */
+      overflow: hidden; /* Oculta el desbordamiento */
+    }
+
+    video {
+      width: 100%; /* Video ocupa todo el ancho */
+      height: auto; /* Mantiene la relación de aspecto */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; /* Color del texto */
+      font-size: 5rem; /* Tamaño del texto */
+      text-align: center;
+      z-index: 1; /* Asegura que esté encima del video */
+    }
+
+    .button-container {
+      margin-top: 1rem; /* Espacio entre el texto y el botón */
+      text-align: center; /* Centra el botón */
+    }
+
+    .obtener-libros {
+      display: inline-block;
+      background-color: #004e5d; /* Color secundario */
+      color: rgb(255, 255, 255); /* Texto en blanco */
+      padding: 0.5rem 1rem; /* Espaciado interno */
+      border-radius: 0.5rem; /* Bordes redondeados */
+      font-size: 1.2rem; /* Tamaño del texto */
+      text-decoration: none; /* Sin subrayado */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo-container">
+        <img src="owlandimg.png" alt="Logo OWLAND" class="logo">
+      </div>
+      <a href="servicios.html" class="aprende-ya">Aprende Ya</a>
+      <div class="search-bar-container">
+        <input type="text" id="search-bar" placeholder="Buscar en la página..." />
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <div class="video-container">
+        <video controls muted>
+          <source src="vidciencias.MOV" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="overlay">¿Qué aprenderás?</div>
+      </div>
+      <div class="button-container">
+        <a href="obtener-libros.html" class="obtener-libros">Obtener libros</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68600.16184166382!2d-79.98481425834942!3d8.847327348444193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fac8fb7216a292f%3A0x1acb7857a669633a!2sCentro%20Recreativo%20El%20Mirador!5e0!3m2!1ses-419!2spa!4v1732216870959!5m2!1ses-419!2spa" width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </footer>
+</body>
+</html>

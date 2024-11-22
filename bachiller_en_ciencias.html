@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de ciencias</title>
+    <style>
+        /*Estilos para el fondo*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("Copia\ de\ no.png");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+/*Estilos para las opcione */
+        .quiz-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+            align-items: center;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-bottom: 15px; 
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="question" id="question"></div>
+        <div class="options" id="options"></div>
+        <button onclick="checkAnswer()">Next Question</button>
+    </div>
+    
+    <script>
+
+        /*Preguntas */
+        const questions = [
+    {
+        question: "What is a fundamental characteristic of the scientific method?",
+        options: [
+            "Primarily rely on intuition.",
+            "Rely on faith and belief.",
+            "Be based on observation, experimentation, and logical reasoning.",
+            "Follow only tradition and ancient beliefs."
+        ],
+        correctAnswer: 2 
+    },
+    {
+        question: "Which law of physics states that force is equal to the product of mass and acceleration?",
+        options: [
+            "First law of Newton (Law of inertia).",
+            "Second law of Newton (Law of force and acceleration).",
+            "Law of conservation of energy.",
+            "Newton's law of universal gravitation."
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "What is the chemical formula for water?",
+        options: ["H2O", "CO2", "NaCl", "CH4"],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the process by which plants convert sunlight into chemical energy?",
+        options: ["Photosynthesis", "Cellular respiration", "Fermentation", "Oxidation"],
+        correctAnswer: 0
+    },
+    {
+        question: "What aspect is studied in agriculture studies?",
+        options: ["Venus", "Jupiter", "Mars", "Saturn"],
+        correctAnswer: 2
+    },
+];
+
+
+        let currentQuestion = 0;
+        let canProceed = true; // Variable para controlar si puede pasar a la siguiente pregunta
+
+function loadQuestion() {
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
+    const currentQuizQuestion = questions[currentQuestion];
+
+    questionElement.textContent = currentQuizQuestion.question;
+    optionsElement.innerHTML = "";
+
+    currentQuizQuestion.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => selectAnswer(index);
+        optionsElement.appendChild(button);
+    });
+}
+
+function selectAnswer(index) {
+    const currentQuizQuestion = questions[currentQuestion];
+    if (index === currentQuizQuestion.correctAnswer) {
+        alert("¡Correct!");
+        canProceed = true; // Permite avanzar a la siguiente pregunta
+    } else {
+        alert("Wrong. Try again.");
+        canProceed = false; // No permite avanzar a la siguiente pregunta
+    }
+}
+
+function checkAnswer() {
+    if (canProceed) {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            alert("¡You've completed the quiz!");
+            currentQuestion = 0;
+            window.location.href = "index.html";
+        }
+    } else {
+        alert("Please answer correctly before answering the next question.");
+    }
+}
+
+loadQuestion();
+</script>
+</body>
+
+</html>
